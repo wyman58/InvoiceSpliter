@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_31"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/mysql-connector-java-5.1.34/mysql-connector-java-5.1.34/mysql-connector-java-5.1.34-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itextpdf-5.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itextpdf-5.5.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itextpdf-5.5.5-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itext-pdfa-5.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itext-pdfa-5.5.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itext-pdfa-5.5.5-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itext-xtra-5.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itext-xtra-5.5.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/itext-5.5.5/itext-xtra-5.5.5-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jess/Desktop/InvoiceSpliter/Document/deployment/commons-csv-1.1-bin/commons-csv-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
