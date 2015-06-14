@@ -25,4 +25,38 @@ public class DAO {
 		JDBC.closeConnection();
 		return group;
 	}
+	
+	public Customer getCustomerInfo(String customerName) throws Exception{
+		Customer customer = new Customer();
+		
+		String sql = "select * from customer where CMTRNM='" + customerName +"'";
+		Connection conn = JDBC.getConnection();
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+		if(rs.next()){
+			customer.setTradeName(rs.getString(1));
+			customer.setLegalName(rs.getString(2));
+			customer.setAbbreviation(rs.getString(3));
+			customer.setAddress1(rs.getString(5));
+			customer.setAddress2(rs.getString(6));
+			customer.setSuburb(rs.getString(8));
+			customer.setProvince(rs.getString(9));
+			customer.setPostcode(rs.getString(10));	
+		}
+		stmt.close();
+		JDBC.closeConnection();
+		return customer;
+	}
+	
+	public void loadData() throws Exception{
+		
+		//String sql = "select * from customer where CMTRNM='" + customerName +"'";
+		Connection conn = JDBC.getConnection();
+		Statement stmt = conn.createStatement();
+		//ResultSet rs = stmt.executeQuery(sql);
+		
+		stmt.close();
+		JDBC.closeConnection();
+		
+	}
 }

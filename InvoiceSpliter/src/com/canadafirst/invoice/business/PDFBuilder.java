@@ -1,6 +1,7 @@
 package com.canadafirst.invoice.business;
 
 import java.io.FileOutputStream;
+import java.util.Date;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Font;
@@ -11,6 +12,7 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class PDFBuilder {
+	
 	
 	private void createPDF(String fileName){
 		Document document = new Document();
@@ -26,15 +28,16 @@ public class PDFBuilder {
 	}
 	
 	private void createSummarySection(Document document){
-		document.add(createCompanyHeaderTable(invoiceDate, customer, compinfo));
-		document.add(createAddressTable(customer));
+		
+		//document.add(createCompanyHeaderTable(invoiceDate, customer, group));
+		//document.add(createAddressTable(customer));
 		//tear off image
 		
 		
 		
 	}
 	
-	private PdfPTable createCompanyHeaderTable(Date invoiceDate, Customer customer, Company compinfo){
+	private PdfPTable createCompanyHeaderTable(Date invoiceDate, Customer customer, Group group) throws Exception{
 		PdfPTable table = new PdfPTable(2);
 		table.setWidths(new float[] {2f,1f});
 		
@@ -65,7 +68,7 @@ public class PDFBuilder {
 	
 	
 	private void createDetailSection(Document document){
-		document.add(table);
+		//document.add(table);
 	}
 	
 	

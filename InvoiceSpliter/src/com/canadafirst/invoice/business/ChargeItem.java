@@ -29,4 +29,9 @@ public class ChargeItem {
 	public void setBilledCharge(double billedCharge) {
 		this.billedCharge = billedCharge;
 	}
+	public double getContractRate(){
+		double rate = 0;
+		
+		return rate;
+	}
 }

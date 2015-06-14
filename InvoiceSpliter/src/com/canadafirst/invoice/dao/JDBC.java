@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class JDBC {
 	private static final String DRIVERCLASS = "com.mysql.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://localhost:3306/canadafirst";
-	private static final String USERNAME = "root";
-	private static final String PASSWORD = "811024";
+	private static final String URL = "jdbc:mysql://canadafirstlc.com:3306/cflc_invoice";
+	private static final String USERNAME = "cflc_admin";
+	private static final String PASSWORD = "Cf2013lc";
 	private static final ThreadLocal<Connection> threadLocal = new ThreadLocal<Connection>();
 	
 	static{

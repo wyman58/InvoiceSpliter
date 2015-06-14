@@ -1,5 +1,6 @@
 package com.canadafirst.invoice.test;
 
+import com.canadafirst.invoice.business.Transaction;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 
@@ -12,21 +13,23 @@ public class TestIText {
 		try{
 			PdfWriter.getInstance(document, new FileOutputStream("C:/testdata/outputPDF/testPDF.pdf"));
 			document.open();
-			
-			PdfPTable table = new PdfPTable(2);
-			table.setWidths(new float[] {2f,1f});
-			
-			PdfPCell cell1 = new PdfPCell();
-			cell1.setBorder(Rectangle.NO_BORDER);
-			cell1.addElement(new Paragraph("Canada First",new Font(Font.FontFamily.HELVETICA,12,Font.BOLD)));
-			cell1.addElement(new Paragraph("Logistical Consulting Inc.",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
-			
-			PdfPCell cell2 = new PdfPCell();
-			cell2.setBorder(Rectangle.NO_BORDER);
-			cell2.addElement(new Paragraph("Serice Invoice",new Font(Font.FontFamily.HELVETICA,10,Font.BOLD)));
-			cell2.addElement(new Paragraph("Invoice Date      " + "Jan 3,2015",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
-			cell2.addElement(new Paragraph("Invoice Number   " + "tom150103",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
-			cell2.addElement(new Paragraph("Shipper Number " + "cf.tom",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
+		
+			//document.add(new Paragraph("To create a new "));
+			//document.setPageSize(PageSize.A4);
+			//document.newPage();
+			//document.add(new Paragraph("To create a new doc page 2"));
+			//Table table = new Table(2,2);
+			PdfPTable table = new PdfPTable(1);
+			//table.setWidths(new float[] {2f,1f});
+			String[] itemDesc = {"Standard","Fuel"};
+			double[] item = {592.8,53.35};
+			PdfPCell cell = new Transaction().createTransactionDetailTableCell(0.65, itemDesc , item, 0.15, 0.1);
+			//PdfPCell cell2 = new PdfPCell();
+			//cell2.setBorder(Rectangle.BOTTOM);
+			//cell2.addElement(new Paragraph("Serice Invoice",new Font(Font.FontFamily.HELVETICA,11,Font.BOLD)));
+			//cell2.addElement(new Paragraph("Invoice Date      " + "Jan 3,2015",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
+			//cell2.addElement(new Paragraph("Invoice Number   " + "tom150103",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
+			//cell2.addElement(new Paragraph("Shipper Number " + "cf.tom",new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL)));
 			
 			
 			//PdfPTable nestedTable = new PdfPTable(2);
@@ -64,10 +67,10 @@ public class TestIText {
 			//cell4.addElement(nestedTable);
 			//cell4.setBorder(Rectangle.NO_BORDER);
 			
-			table.addCell(cell1);
-			table.addCell(cell2);
+			//table.addCell(cell1);
+			table.addCell(cell);
 			
-			table.addCell(new PdfPCell());
+			//table.addCell(new PdfPCell());
 			
 			//table.addCell(cell4);
 			
